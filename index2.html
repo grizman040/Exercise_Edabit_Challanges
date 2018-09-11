@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edabit Challanges</title>
+</head>
+
+<body>
+
+    <!-- Create a function that takes an array of numbers between 1 and 10 (excluding one number) and returns the missing number.
+    Notes: The array of numbers will be unsorted (not in order). Only one number will be missing. -->
+
+    <script>
+
+        function missingNums(arr) {
+            const correctArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+            return correctArray.find(e => !(arr.includes(e)))
+        }
+
+        function test(result, correctResult) {
+            return result === correctResult ? console.log('correct') : console.log('uncorrect')
+        }
+
+        test(missingNums([1, 2, 3, 4, 6, 7, 8, 9, 10]), 5)
+        test(missingNums([7, 2, 3, 6, 5, 9, 1, 4, 8]), 10)
+        test(missingNums([7, 2, 3, 9, 4, 5, 6, 8, 10]), 1)
+        test(missingNums([10, 5, 1, 2, 4, 6, 8, 3, 9]), 7)
+        test(missingNums([1, 7, 2, 4, 8, 10, 5, 6, 9]), 3)
+
+
+    </script>
+</body>
+
+</html>
