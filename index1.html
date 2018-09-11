@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edabit Challanges</title>
+</head>
+
+<body>
+
+    <!-- Create a function that accepts a string of space separated numbers and returns the highest and lowest number (as a string). 
+
+    Notes:
+All numbers are valid Int32, no need to validate them.
+There will always be at least one number in the input string.
+Output string must be two numbers separated by a single space, and highest number is first.
+-->
+
+    <script>
+        function highLow(str) {
+            let tabStr = str.split(' ')
+            let max = Math.max(...tabStr)
+            let min = Math.min(...tabStr)
+ 
+            return `${max} ${min}`
+        }
+
+        function tests(result, correctResult) {
+            return result === correctResult ? console.log('correct') : console.log('uncorrect')
+        }
+
+        tests(highLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"), "542 -214")
+        tests(highLow("1 -1"), "1 -1")
+        tests(highLow("1 1"), "1 1")
+        tests(highLow("-1 -1"), "-1 -1")
+        tests(highLow("1 -1 0"), "1 -1")
+        tests(highLow("1 1 0"), "1 0")
+        tests(highLow("-1 -1 0"), "0 -1")
+        tests(highLow("42"), "42 42")
+
+
+    </script>
+</body>
+
+</html>
