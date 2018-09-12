@@ -15,7 +15,7 @@
 
     <script>
         function createSquare(length) {
-            if (length === 1) { return "#" }
+            if(length === 1){ return "#"}
 
             let result
             if (length <= 0) {
@@ -25,8 +25,8 @@
                 let space = ' '
                 let top = `${hasztag.repeat(length)}\n`
                 let bottom = `${hasztag.repeat(length)}`
-                let middle = hasztag + space.repeat(Math.floor(length / 2)) + hasztag + '\n'
-                return top + middle.repeat(length - 2) + bottom
+                let middle = hasztag + space.repeat(length - 2) + hasztag + '\n'
+                return top + middle.repeat(length-2) + bottom  
             }
         }
 
