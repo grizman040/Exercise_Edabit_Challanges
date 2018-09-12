@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edabit Challanges</title>
+</head>
+
+<body>
+
+    <!-- 
+    Create a function createSquare that takes a number as an argument and returns the a string like square. -->
+
+    <script>
+        function createSquare(length) {
+            if (length === 1) { return "#" }
+
+            let result
+            if (length <= 0) {
+                return ""
+            } else {
+                let hasztag = '#'
+                let space = ' '
+                let top = `${hasztag.repeat(length)}\n`
+                let bottom = `${hasztag.repeat(length)}`
+                let middle = hasztag + space.repeat(Math.floor(length / 2)) + hasztag + '\n'
+                return top + middle.repeat(length - 2) + bottom
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
