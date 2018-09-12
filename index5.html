@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edabit Challanges</title>
+</head>
+
+<body>
+
+    <!-- Create a function that takes an array of positive and negative numbers. Return an array where the first element is the count
+    of positive numbers and the second element is the sum of negative numbers. 
+    Notes: If the input array is empty or null, return an empty array. -->
+
+    <script>
+        function countPosSumNeg(arr) {
+            let result
+            if (arr === null || arr.length === 0) {
+                result = []
+            } else {
+                let amountPositive = 0
+                let sumNegative = 0
+
+                arr.forEach(element => {
+                    element > 0 ? amountPositive += 1 : sumNegative += element
+                });
+
+                result = [amountPositive, sumNegative]
+            }
+            return result
+        }
+
+    </script>
+
+</body>
+
+</html>
