@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edabit Challanges</title>
+</head>
+
+<body>
+
+    <!-- Create a function that accepts an array of two strings and checks if the letters in the second string are present in the
+    first string. 
+    Notes: Function should not be case sensitive (as indicated in the second example). Both strings are presented
+    as a single argument in the form of an array. Bonus if you can do this without RegEx. -->
+
+    <script>
+        function letterCheck(arr) {
+            let firstStringArray = arr[0].toLowerCase().split('')
+            let secondStringArray = arr[1].toLowerCase().split('')
+
+            let secondStringToFirstString = secondStringArray.filter(element => {
+
+                firstStringArray.find(e=> 
+                e === element ) === true
+
+            })
+
+            if (secondStringToFirstString.length === secondStringArray.length) { return true } else { return false }
+        }
+
+        function test(result, correctResult) {
+            return result === correctResult ? console.log('correct') : console.log('uncorrect')
+        }
+
+        test(letterCheck(["trances", "nectar"]), true)
+        test(letterCheck(["THE EYES", "they see"]), true)
+        test(letterCheck(["assert", "staring"]), false)
+        test(letterCheck(["arches", "later"]), false)
+        test(letterCheck(["dale", "caller"]), false)
+        test(letterCheck(["parses", "parsecs"]), false)
+        test(letterCheck(["replays", "adam"]), false)
+        test(letterCheck(["mastering", "streaming"]), true)
+        test(letterCheck(["drapes", "compadres"]), false)
+        test(letterCheck(["deltas", "slated"]), true)
+
+    </script>
+</body>
+
+</html>
