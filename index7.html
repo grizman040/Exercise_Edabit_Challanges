@@ -17,17 +17,14 @@
 
     <script>
         function letterCheck(arr) {
-            let firstStringArray = arr[0].toLowerCase().split('')
+            let firstString = arr[0].toLowerCase()
             let secondStringArray = arr[1].toLowerCase().split('')
 
-            let secondStringToFirstString = secondStringArray.filter(element => {
+            let result = secondStringArray.filter(element => {
+                return firstString.indexOf(element) >= 0
+            });
 
-                firstStringArray.find(e=> 
-                e === element ) === true
-
-            })
-
-            if (secondStringToFirstString.length === secondStringArray.length) { return true } else { return false }
+            return result.length === secondStringArray.length? true : false 
         }
 
         function test(result, correctResult) {
