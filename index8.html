@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edabit Challanges</title>
+</head>
+
+<body>
+    <!-- Create a function that takes an array of numbers and returns an array where each number is the sum of itself + all previous
+    numbers in the array. 
+    Notes Return an empty array if the input is an empty array. -->
+
+    <script>
+        function cumulativeSum(arr) {
+            if (arr !== []) {
+                let result = arr.map((element, index, arr)=>{
+                   return arr.filter((e, i) => i <= index).reduce((r,e) => r + e, 0)
+                })
+                return result
+            } else {
+                return []
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
