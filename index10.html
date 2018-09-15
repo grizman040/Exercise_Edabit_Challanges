@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edabit Challanges</title>
+</head>
+
+<body>
+    <!-- Create a function that takes a sequence of either strings or numbers, removes the surrounding duplicates and returns an array
+    of items without any items with the same value next to each other and preserves the original order of items. 
+    Notes: The initial sequence of items can be either a string or an array. Test cases are case sensitive. -->
+
+    <script>
+        function uniqueInOrder(sequence) {
+            let seq = typeof sequence === 'string' ? sequence.split('') : sequence;
+            return seq.filter((element, index, arr) => {
+               return index > 0 ? element !== arr[index - 1] : element
+            });
+        }
+
+        uniqueInOrder('<dddMMMSSahskkkkk');
+
+    </script>
+</body>
+
+</html>
