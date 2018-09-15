@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edabit Challanges</title>
+</head>
+
+<body>
+    <!-- Create a function that takes an object and returns the keys and values as separate arrays. Notes: Result should be sorted.
+    All tests contain valid objects. -->
+
+    <script>
+function keysAndValues(obj) {
+    debugger
+    let keys = Object.keys(obj).sort()
+    let values = Object.values(obj).sort()
+    return [keys, values]
+}
+
+keysAndValues({a: 1, b: 2, c: 3})
+    </script>
+</body>
+
+</html>
