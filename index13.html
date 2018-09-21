@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+        <!-- Create a function that accepts a string, checks if it's a valid email address and returns either true or false, depending on the evaluation.
+        The string must contain an @ character.
+        The string must contain a . character.
+        The @ must have at least one character in front of it.
+        e.g. "e@edabit.com" is valid while "@edabit.com" is invalid.
+        The . and the @ must be in the appropriate places.
+        e.g. "hello.email@com" is invalid while "john.smith@email.com" is valid.
+        If the string passes these tests, it's considered a valid email address. -->
+
+    <script>
+function validateEmail(str) {
+        let reg = /^[\w\.]+@\w+\.\w+$/
+	return str.match(reg) ? true : false
+}
+
+validateEmail('magda.klopos@dmd.pl')
+    
+    
+    </script>
+    
+</body>
+</html>
